@@ -17,7 +17,7 @@ function hide_plugin_note() {
     
 }
 
-add_action('wp_head', 'hide_plugin_note', 100);
+add_action('wp_footer', 'hide_plugin_note', 100);
 
 
 ?>
