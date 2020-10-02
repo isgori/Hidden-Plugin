@@ -9,15 +9,18 @@
     
     */
 	
+
+
+
 function hide_plugin_note() {
-    
-    echo '<<style type="text/css">#order_comments_field{
-        display:none;
-        }</style> ';
-    
+        echo ' <script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) { 
+ var x = document.getElementsByClassName("woocommerce-additional-fields");
+             x[0].style.display = "none"; 
+                });'.'</script>';
 }
 
-add_action('wp_footer', 'hide_plugin_note', 100);
+add_filter('wp_footer', 'hide_plugin_note', 100);
 
 
 ?>
